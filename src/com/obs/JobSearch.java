@@ -8,7 +8,7 @@ public class JobSearch {
         jobsite.addvacancy("Senior");
 
         Observer firstSubscriber = new Subscriber("John Doe");
-        Observer secondSubscriber = new Subscriber("Michael Kiton");
+        Observer secondSubscriber = new Subscriber("Michael Kithon");
 
         jobsite.addObserver(firstSubscriber);
         jobsite.addObserver(secondSubscriber);
