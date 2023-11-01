@@ -1,12 +1,11 @@
 package com.obs;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JavaCompany implements Observed{
     List<String> vacancies = new ArrayList<>();
-    List<String> subscribers = new ArrayList<>();
+    List<Observer> subscribers = new ArrayList<>();
 
     public void addvacancy(String vacancy){
         this.vacancies.add(vacancy);
@@ -29,7 +28,7 @@ public class JavaCompany implements Observed{
 
     @Override
     public void notifyObservers() {
-        for(Observer observer : subscribers){
+        for(    Observer observer : subscribers){
             observer.HandleEvent(this.vacancies);
         }
     }
